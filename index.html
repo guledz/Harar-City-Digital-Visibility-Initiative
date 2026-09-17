@@ -1,0 +1,2105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harar City Digital Visibility Initiative — City Digital Economic Infrastructure Proposal</title>
+
+<!--
+  ============================================================================
+  HARAR CITY DIGITAL VISIBILITY INITIATIVE
+  City Digital Economic Infrastructure Proposal — Harar Pilot
+  ============================================================================
+  Typographic system: "ORCA institutional"
+    · Body text ......... Georgia / Times New Roman, 10.5pt, 1.58 leading
+    · Section headings .. Serif bold, numbered, hairline rule beneath
+    · Labels / meta ..... Helvetica / Arial, uppercase, letter-spaced
+    · Tables ............ Booktabs — horizontal rules only
+    · Palette ........... Deep teal #0f4c5c · Muted gold #a67c2e · Ink #14181d
+
+  Page format: A4 (210 × 297 mm). Screen shows page sheets; Print / Save as
+  PDF produces a paginated document with running heads and folios.
+  Editing: toolbar toggle, or Ctrl/Cmd + E.
+  ============================================================================
+-->
+
+<style>
+/* ---------------------------------------------------------------- RESET */
+*, *::before, *::after { box-sizing: border-box; }
+
+:root{
+  --ink:          #14181d;
+  --ink-soft:     #39424c;
+  --muted:        #6b7784;
+  --rule:         #d5dbe1;
+  --rule-strong:  #1f2a35;
+  --accent:       #0f4c5c;
+  --accent-2:     #a67c2e;
+  --paper:        #ffffff;
+  --serif:        Georgia, "Times New Roman", Times, serif;
+  --sans:         "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html{ background:#e6e9ec; }
+
+body{
+  margin:0;
+  font-family: var(--serif);
+  font-size: 10.5pt;
+  line-height: 1.58;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ------------------------------------------------------------- TOOLBAR */
+.toolbar{
+  position: sticky; top:0; z-index: 50;
+  display:flex; align-items:center; gap:14px; flex-wrap: wrap;
+  padding: 10px 18px;
+  background: #10212b;
+  color:#e8eef2;
+  font-family: var(--sans);
+  font-size: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.22);
+}
+.toolbar .tb-title{
+  font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size: 11px; margin-right:auto;
+}
+.toolbar .tb-title span{ color:#7fa8b5; font-weight:400; letter-spacing:.06em; margin-left:8px; text-transform:none; }
+.toolbar button{
+  font-family: var(--sans); font-size: 11.5px; font-weight:600;
+  padding: 7px 14px; border-radius: 3px; cursor: pointer;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(255,255,255,.06);
+  color: #e8eef2;
+  transition: background .15s, border-color .15s;
+}
+.toolbar button:hover{ background: rgba(255,255,255,.14); }
+.toolbar button.primary{ background:#a67c2e; border-color:#a67c2e; color:#fff; }
+.toolbar button.primary:hover{ background:#8e6a25; }
+.toolbar button.on{ background:#1c6b4f; border-color:#1c6b4f; color:#fff; }
+
+/* ------------------------------------------------------------- SHEETS */
+main#doc{ padding: 26px 12px 60px; }
+
+.sheet{
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto 20px;
+  padding: 15mm 18mm 12mm;
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,.16), 0 14px 34px rgba(0,0,0,.12);
+}
+
+.sheet-head{
+  display:flex; justify-content:space-between; align-items:baseline; gap:16px;
+  font-family: var(--sans);
+  font-size: 7.2pt; letter-spacing:.13em; text-transform: uppercase;
+  color: var(--muted);
+  border-bottom: .6pt solid var(--rule);
+  padding-bottom: 5px;
+  margin-bottom: 14px;
+}
+.sheet-head .sh-right{ color: var(--accent); font-weight:700; text-align:right; }
+
+.sheet-body{ flex: 1 0 auto; }
+
+.sheet-foot{
+  margin-top: auto;
+  padding-top: 7px;
+  border-top: .6pt solid var(--rule);
+  display:flex; justify-content:space-between; align-items:baseline; gap:16px;
+  font-family: var(--sans);
+  font-size: 7.2pt; letter-spacing:.09em; text-transform: uppercase;
+  color: var(--muted);
+}
+.sheet-foot .folio{ font-weight:700; color: var(--ink-soft); letter-spacing:.06em; }
+
+/* ============================================================
+   COVER PAGE — clean, minimal, professional
+   ============================================================ */
+.cover{ padding: 0; }
+
+.cover-inner{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 273mm;
+  padding: 30mm 22mm 18mm;
+}
+
+/* top accent bar */
+.cover-bar{
+  width: 34mm;
+  height: 3.5pt;
+  background: var(--accent);
+  margin-bottom: 46mm;
+}
+
+/* title block */
+.cover-kicker{
+  font-family: var(--sans);
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  margin: 0 0 24px;
+}
+
+.cover-title{
+  font-family: var(--serif);
+  font-size: 42pt;
+  line-height: 1.06;
+  font-weight: 700;
+  letter-spacing: -0.024em;
+  color: var(--ink);
+  margin: 0 0 26px;
+}
+
+.cover-tagline{
+  font-family: var(--serif);
+  font-size: 13pt;
+  line-height: 1.48;
+  font-style: italic;
+  color: var(--ink-soft);
+  max-width: 122mm;
+  margin: 0;
+}
+
+/* bottom metadata block */
+.cover-bottom{
+  margin-top: auto;
+}
+
+.cover-rule{
+  height: .8pt;
+  background: var(--rule-strong);
+  margin-bottom: 22px;
+}
+
+.cover-data{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 26px;
+  row-gap: 16px;
+  margin: 0 0 32px;
+}
+
+.cover-data .cd-item{ break-inside: avoid; }
+
+.cover-data dt{
+  font-family: var(--sans);
+  font-size: 7pt;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+
+.cover-data dd{
+  font-family: var(--serif);
+  font-size: 10.2pt;
+  line-height: 1.42;
+  color: var(--ink);
+  margin: 0;
+}
+
+.cover-foot{
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 11px;
+  border-top: .6pt solid var(--rule);
+  font-family: var(--sans);
+  font-size: 7.2pt;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ------------------------------------------------------ TYPOGRAPHY */
+.eyebrow{
+  font-family: var(--sans); font-size: 7.4pt; font-weight:700;
+  letter-spacing:.16em; text-transform:uppercase; color: var(--accent-2);
+  margin: 0 0 5px;
+}
+
+h2.sec{
+  font-family: var(--serif);
+  font-size: 14pt; font-weight: 700; line-height: 1.22;
+  letter-spacing: -0.008em;
+  margin: 0 0 12px;
+  padding-bottom: 7px;
+  border-bottom: 1.6pt solid var(--rule-strong);
+}
+h2.sec .sec-num{ color: var(--accent-2); margin-right: .45em; }
+
+h3.sub{
+  font-family: var(--serif);
+  font-size: 11pt; font-weight: 700; line-height: 1.3;
+  margin: 17px 0 6px;
+  color: var(--accent);
+}
+h3.sub .sub-num{ color: var(--accent-2); margin-right: .4em; }
+
+h4.minor{
+  font-family: var(--sans); font-size: 8.4pt; font-weight: 700;
+  letter-spacing:.1em; text-transform: uppercase; color: var(--ink-soft);
+  margin: 15px 0 6px;
+}
+
+p{ margin: 0 0 9px; text-align: justify; hyphens: auto; }
+p.lead{ font-size: 11.3pt; line-height: 1.55; color: var(--ink-soft); margin-bottom: 12px; }
+p:last-child{ margin-bottom: 0; }
+
+strong{ font-weight: 700; }
+em{ font-style: italic; }
+
+/* --------------------------------------------------------- LISTS */
+ul.plain, ol.plain{ list-style:none; margin: 8px 0 10px; padding: 0; }
+ul.plain li{
+  position: relative; padding-left: 16px; margin-bottom: 6px;
+  text-align: justify;
+}
+ul.plain li::before{
+  content:""; position:absolute; left: 1px; top: .58em;
+  width: 4px; height: 4px; background: var(--accent-2);
+}
+ul.plain li:last-child{ margin-bottom: 0; }
+
+ol.obj{ counter-reset: obj; list-style:none; margin: 10px 0 0; padding: 0; }
+ol.obj li{
+  counter-increment: obj;
+  position: relative; padding-left: 27px; margin-bottom: 9px;
+  text-align: justify;
+}
+ol.obj li::before{
+  content: counter(obj);
+  position: absolute; left: 0; top: 1px;
+  width: 17px; height: 17px; line-height: 17.5px;
+  text-align: center;
+  font-family: var(--sans); font-size: 8pt; font-weight: 700;
+  color: #fff; background: var(--accent); border-radius: 50%;
+}
+ol.obj li:last-child{ margin-bottom: 0; }
+
+/* --------------------------------------------------------- TABLES */
+table.tbl{
+  width: 100%; border-collapse: collapse;
+  font-size: 9.3pt; margin: 12px 0 6px;
+}
+.tbl caption{
+  caption-side: top; text-align: left;
+  font-family: var(--sans); font-size: 7.4pt; font-weight:700;
+  letter-spacing:.14em; text-transform:uppercase; color: var(--muted);
+  padding-bottom: 6px;
+}
+.tbl thead th{
+  font-family: var(--sans); font-size: 7.3pt; font-weight:700;
+  letter-spacing:.11em; text-transform:uppercase; color: var(--ink);
+  text-align: left; vertical-align: bottom;
+  padding: 7px 9px 6px;
+  border-top: 1.4pt solid var(--rule-strong);
+  border-bottom: .7pt solid var(--rule-strong);
+}
+.tbl tbody td{
+  padding: 6.5px 9px; vertical-align: top;
+  border-bottom: .5pt solid var(--rule);
+  line-height: 1.45;
+}
+.tbl tbody tr:last-child td{ border-bottom: 1.2pt solid var(--rule-strong); }
+.tbl td.num, .tbl th.num{ text-align: center; width: 11mm; font-family: var(--sans); font-size: 8.6pt; font-weight:700; color: var(--accent); }
+.tbl .muted{ color: var(--muted); font-style: italic; }
+.tbl-note{
+  font-size: 8.4pt; color: var(--muted); line-height: 1.45;
+  margin: 6px 0 0; text-align: left; font-style: italic;
+}
+
+/* --------------------------------------------------------- CALLOUT */
+.callout{
+  border: .7pt solid var(--rule);
+  border-left: 3pt solid var(--accent-2);
+  background: #faf8f3;
+  padding: 12px 16px 14px;
+  margin: 15px 0 4px;
+}
+.callout .eyebrow{ margin-bottom: 8px; }
+.callout p{ margin: 0; text-align: left; }
+
+.panel-dark{
+  background: var(--accent);
+  color: #ffffff;
+  padding: 15px 18px 16px;
+  margin: 15px 0 4px;
+}
+.panel-dark .eyebrow{ color: #e6c979; margin-bottom: 8px; }
+.panel-dark h3{
+  font-family: var(--serif); font-size: 12pt; font-weight:700;
+  margin: 0 0 6px; color:#fff; line-height:1.3;
+}
+.panel-dark p{ color:#dbe7ec; margin: 0; text-align: left; }
+
+.kv{ display: grid; grid-template-columns: 44mm 1fr; gap: 0; font-size: 9.3pt; }
+.kv dt{
+  font-family: var(--sans); font-size: 7.4pt; font-weight:700;
+  letter-spacing:.1em; text-transform:uppercase; color: var(--muted);
+  padding: 5px 12px 5px 0; border-bottom: .5pt dotted var(--rule);
+}
+.kv dd{
+  margin: 0; padding: 5px 0; border-bottom: .5pt dotted var(--rule);
+  color: var(--ink);
+}
+.kv dt:last-of-type, .kv dd:last-of-type{ border-bottom: none; }
+
+/* --------------------------------------------------------- CARDS */
+.grid2{ display:grid; grid-template-columns:1fr 1fr; gap:11px; margin:12px 0 4px; }
+.grid3{ display:grid; grid-template-columns:repeat(3,1fr); gap:11px; margin:12px 0 4px; }
+
+.pcard{
+  border: .6pt solid var(--rule);
+  background: #fbfcfd;
+  padding: 11px 13px 12px;
+}
+.pcard h4{
+  font-family: var(--sans); font-size: 8pt; font-weight:700;
+  letter-spacing:.1em; text-transform:uppercase; color: var(--accent);
+  margin: 0 0 6px;
+}
+.pcard p{ font-size: 9.4pt; margin: 0; text-align: left; line-height:1.48; }
+.pcard ul{ margin: 0; padding: 0; list-style: none; }
+.pcard ul li{
+  position: relative; padding-left: 12px; margin-bottom: 4px;
+  font-size: 9.4pt; line-height: 1.46; text-align: left;
+}
+.pcard ul li::before{
+  content:""; position:absolute; left: 0; top: .55em;
+  width: 3.5px; height: 3.5px; background: var(--accent-2);
+}
+.pcard ul li:last-child{ margin-bottom: 0; }
+.pcard .card-num{
+  font-family: var(--sans); font-size: 13pt; font-weight:700;
+  color: var(--accent-2); line-height: 1; margin-bottom: 6px; display:block;
+  letter-spacing:-.02em;
+}
+
+/* --------------------------------------------------------- PHASES */
+.phase{
+  display: grid; grid-template-columns: 30mm 1fr; gap: 0 12px;
+  padding: 10px 0;
+  border-top: .6pt solid var(--rule);
+}
+.phase:last-of-type{ border-bottom: 1.2pt solid var(--rule-strong); }
+.ph-meta{ display: flex; flex-direction: column; gap: 2px; padding-top: 1px; }
+.ph-num{
+  font-family: var(--sans); font-size: 7.4pt; font-weight:700;
+  letter-spacing:.14em; text-transform:uppercase; color: var(--accent-2);
+}
+.ph-weeks{
+  font-family: var(--sans); font-size: 8pt; font-weight:700;
+  color: var(--accent); letter-spacing:.02em;
+}
+.ph-body p{ margin: 0; font-size: 9.9pt; text-align: left; }
+.ph-title{
+  font-family: var(--serif); font-size: 10.4pt; font-weight:700;
+  margin: 0 0 3px; line-height: 1.3;
+}
+
+/* --------------------------------------------------------- ROLES */
+.role{
+  border-top: .6pt solid var(--rule);
+  padding: 11px 0 12px;
+}
+.role:last-child{ border-bottom: 1.2pt solid var(--rule-strong); }
+.role-head{ display:flex; align-items:baseline; gap:9px; margin-bottom: 5px; flex-wrap: wrap; }
+.role-num{
+  font-family: var(--sans); font-size: 8pt; font-weight:700;
+  color: #fff; background: var(--accent);
+  padding: 2px 6px; border-radius: 2px; letter-spacing:.04em;
+}
+.role-name{ font-family: var(--serif); font-size: 11pt; font-weight:700; margin:0; }
+.role-tag{
+  font-family: var(--sans); font-size: 7.4pt; font-weight:700;
+  letter-spacing:.1em; text-transform:uppercase; color: var(--accent-2);
+  margin-left: auto; white-space: nowrap;
+}
+
+/* --------------------------------------------------------- CHECKLIST */
+ul.check{
+  columns: 2; column-gap: 22px;
+  list-style: none; margin: 10px 0 4px; padding: 0;
+}
+ul.check li{
+  position: relative; padding-left: 15px; margin-bottom: 5px;
+  font-size: 9.5pt; line-height: 1.45;
+  break-inside: avoid; -webkit-column-break-inside: avoid;
+}
+ul.check li::before{
+  content:"✓"; position:absolute; left:0; top:0;
+  font-family: var(--sans); font-size: 7.5pt; font-weight:700;
+  color: var(--accent-2);
+}
+
+/* --------------------------------------------------------- DATA STRIP */
+.data-strip{
+  background: var(--accent);
+  color: #ffffff;
+  padding: 14px 17px 15px;
+  font-family: var(--sans);
+  font-size: 8.4pt; line-height: 1.85; letter-spacing:.01em;
+  margin: 12px 0 4px;
+}
+.data-strip .eyebrow{ color:#e6c979; margin-bottom: 8px; }
+
+/* --------------------------------------------------------- SIGNATURE */
+.sig-block{
+  margin-top: 20px;
+  border-top: 1.4pt solid var(--rule-strong);
+  padding-top: 14px;
+}
+.sig-grid{ display:grid; grid-template-columns: 1fr 1fr; gap: 20px 26px; }
+.sig{ font-size: 9.2pt; }
+.sig .sig-line{ border-bottom: .7pt solid var(--rule-strong); height: 15mm; margin-bottom: 5px; }
+.sig .sig-name{ font-weight:700; }
+.sig .sig-role{ font-family: var(--sans); font-size: 7.4pt; letter-spacing:.1em; text-transform:uppercase; color: var(--muted); }
+
+/* --------------------------------------------------------- EDITING */
+[contenteditable="true"]{ outline: none; }
+body.editing [contenteditable="true"]:focus{
+  background: #fffdf5;
+  box-shadow: 0 0 0 2px rgba(166,124,46,.28);
+  border-radius: 2px;
+}
+body.editing .sheet{ box-shadow: 0 0 0 1px rgba(15,76,92,.28), 0 14px 34px rgba(0,0,0,.12); }
+
+/* --------------------------------------------------------- RESPONSIVE */
+@media screen and (max-width: 860px){
+  main#doc{ padding: 14px 8px 40px; }
+  .sheet{ width: 100%; min-height: 0; padding: 20px 18px; margin-bottom: 14px; }
+  .cover-inner{ min-height: 0; padding: 26px 6px 14px; }
+  .cover-bar{ margin-bottom: 26px; }
+  .cover-title{ font-size: 26pt; }
+  .cover-tagline{ font-size: 11.5pt; }
+  .cover-data{ grid-template-columns: 1fr; gap: 14px; margin-bottom: 24px; }
+  .grid2, .grid3{ grid-template-columns: 1fr; }
+  .kv{ grid-template-columns: 1fr; }
+  .kv dt{ padding-bottom: 0; border-bottom: none; }
+  .kv dd{ padding-top: 2px; }
+  .phase{ grid-template-columns: 1fr; gap: 5px; }
+  .ph-meta{ flex-direction: row; gap: 10px; align-items: baseline; }
+  .sig-grid{ grid-template-columns: 1fr; }
+  ul.check{ columns: 1; }
+  .role-tag{ margin-left: 0; }
+}
+
+/* --------------------------------------------------------- PRINT */
+@page{ size: A4; margin: 0; }
+
+@media print{
+  html, body{ background: #fff !important; }
+  .toolbar{ display: none !important; }
+  main#doc{ padding: 0 !important; }
+
+  .sheet{
+    width: 210mm;
+    min-height: 296.5mm;
+    margin: 0;
+    padding: 15mm 18mm 12mm;
+    box-shadow: none !important;
+    break-after: page;
+    page-break-after: always;
+  }
+  .sheet:last-child{ break-after: auto; page-break-after: auto; }
+  .sheet.cover{ padding: 0 !important; }
+
+  body.editing .sheet{ box-shadow: none !important; }
+  [contenteditable="true"]:focus{ background: transparent !important; box-shadow: none !important; }
+
+  h2.sec, h3.sub, h4.minor{ break-after: avoid; page-break-after: avoid; }
+  .phase, .role, table.tbl, .callout, .panel-dark, .pcard, .grid2, .grid3{ break-inside: avoid; page-break-inside: avoid; }
+  thead{ display: table-header-group; }
+
+  *{ -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ============================ TOOLBAR (screen only) ==================== -->
+<div class="toolbar" role="toolbar" aria-label="Document controls">
+  <div class="tb-title">Harar City Digital Visibility Initiative <span>· Proposal v2.0</span></div>
+  <button id="btn-edit" type="button" aria-pressed="false">✎ Enable editing</button>
+  <button id="btn-print" type="button" class="primary">⤓ Print / Save as PDF</button>
+</div>
+
+<main id="doc" contenteditable="false" spellcheck="false">
+
+<!-- ==================================================================== -->
+<!-- PAGE 1 — COVER (clean, minimal)                                      -->
+<!-- ==================================================================== -->
+<section class="sheet cover">
+  <div class="cover-inner">
+
+    <div class="cover-bar"></div>
+
+    <p class="cover-kicker">City Digital Economic Infrastructure</p>
+
+    <h1 class="cover-title">
+      Harar City<br>
+      Digital Visibility<br>
+      Initiative
+    </h1>
+
+    <p class="cover-tagline">
+      Local business digital presence as city-level economic
+      infrastructure — a twelve-month programme for the Harar pilot.
+    </p>
+
+    <div class="cover-bottom">
+      <div class="cover-rule"></div>
+
+      <dl class="cover-data">
+        <div class="cd-item">
+          <dt>Prepared for</dt>
+          <dd>Harar City Administration</dd>
+        </div>
+        <div class="cd-item">
+          <dt>Prepared by</dt>
+          <dd>Guled Hassen Ahmed<br>Adal Digital Marketing</dd>
+        </div>
+        <div class="cd-item">
+          <dt>Location</dt>
+          <dd>Harar, Ethiopia</dd>
+        </div>
+        <div class="cd-item">
+          <dt>Programme duration</dt>
+          <dd>12 months · seven phases</dd>
+        </div>
+        <div class="cd-item">
+          <dt>Pilot scope</dt>
+          <dd>One district or cluster · approx. 50–100 businesses</dd>
+        </div>
+        <div class="cd-item">
+          <dt>Document</dt>
+          <dd>Upgraded proposal · Version 2.0 · September 2026</dd>
+        </div>
+      </dl>
+
+      <div class="cover-foot">
+        <span>Harar · Ethiopia</span>
+        <span>Page 1 of 21</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 2 — CONTENTS                                                    -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">Contents</span>
+  </header>
+
+  <div class="sheet-body">
+    <h2 class="sec"><span class="sec-num">—</span>Contents</h2>
+
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th class="num" style="width:14mm;">§</th>
+          <th>Title</th>
+          <th class="num" style="width:18mm;">Page</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="num">—</td><td>Executive Summary</td><td class="num">3</td></tr>
+        <tr><td class="num">1</td><td>Strategic Case — Physical City + Digital City</td><td class="num">4</td></tr>
+        <tr><td class="num">2</td><td>Problem Statement</td><td class="num">5</td></tr>
+        <tr><td class="num">3</td><td>Four-Perspective Analysis</td><td class="num">6</td></tr>
+        <tr><td class="num">4</td><td>Programme Objective and Results</td><td class="num">7</td></tr>
+        <tr><td class="num">5</td><td>Proposed Programme Architecture</td><td class="num">8</td></tr>
+        <tr><td class="num">6</td><td>Business Data Model</td><td class="num">10</td></tr>
+        <tr><td class="num">7</td><td>Implementation Roadmap — 12 Months</td><td class="num">12</td></tr>
+        <tr><td class="num">8</td><td>Governance and Roles</td><td class="num">13</td></tr>
+        <tr><td class="num">9</td><td>Monitoring, Evaluation and KPIs</td><td class="num">15</td></tr>
+        <tr><td class="num">10</td><td>Risks and Mitigation</td><td class="num">17</td></tr>
+        <tr><td class="num">11</td><td>Sustainability and Resource Framework</td><td class="num">18</td></tr>
+        <tr><td class="num">12</td><td>Pilot Design &amp; Field Tools</td><td class="num">19</td></tr>
+        <tr><td class="num">13</td><td>Decision Requested</td><td class="num">20</td></tr>
+        <tr><td class="num">14</td><td>Conclusion</td><td class="num">20</td></tr>
+        <tr><td class="num">15</td><td>Evidence &amp; Sources</td><td class="num">21</td></tr>
+      </tbody>
+    </table>
+
+    <h4 class="minor" style="margin-top:24px;">Tables and Exhibits</h4>
+    <table class="tbl">
+      <tbody>
+        <tr>
+          <td style="width:70%;">Programme architecture — seven phases</td>
+          <td class="muted">Section 5 · p. 8–9</td>
+        </tr>
+        <tr>
+          <td>Digital presence scorecard — ten dimensions</td>
+          <td class="muted">Section 6 · p. 11</td>
+        </tr>
+        <tr>
+          <td>Implementation roadmap — 12 months</td>
+          <td class="muted">Section 7 · p. 12</td>
+        </tr>
+        <tr>
+          <td>Governance roles and data governance principles</td>
+          <td class="muted">Section 8 · p. 13–14</td>
+        </tr>
+        <tr>
+          <td>KPI framework and logical framework</td>
+          <td class="muted">Section 9 · p. 15–16</td>
+        </tr>
+        <tr>
+          <td>Risk register and mitigation</td>
+          <td class="muted">Section 10 · p. 17</td>
+        </tr>
+        <tr>
+          <td>Pilot data-collection template and audit checklist</td>
+          <td class="muted">Section 12 · p. 19</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 2 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 3 — EXECUTIVE SUMMARY                                           -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">Executive Summary</span>
+  </header>
+
+  <div class="sheet-body">
+    <h2 class="sec"><span class="sec-num">—</span>Executive Summary</h2>
+
+    <p class="lead">
+      This proposal reframes local business online presence as a component of
+      <strong>city-level digital economic infrastructure</strong>, rather than as a
+      website-development programme.
+    </p>
+
+    <p>
+      Harar Jugol, the fortified historic town, was inscribed on the UNESCO World
+      Heritage List in 2006 and is recognised for its historic urban fabric, African
+      and Islamic cultural traditions, living heritage and handicrafts. UNESCO also
+      notes the continuing challenge of balancing conservation, infrastructure,
+      quality of life and sustainable development.
+    </p>
+
+    <p>
+      Ethiopia is undergoing a broader digital transition. The proposal cites World
+      Bank evidence that unique mobile subscribers increased by approximately seven
+      million between 2020 and 2024, and that internet use stood at 22% of the
+      population in 2024.
+    </p>
+
+    <div class="callout">
+      <p class="eyebrow">Core approach</p>
+      <p>
+        Verified business dataset → digital baseline → targeted improvements →
+        owner/staff training → governed city discovery layer → measurement → scale
+        toolkit.
+      </p>
+    </div>
+
+    <p style="margin-top:15px;">
+      The original proposal identified a 16-week pilot for approximately 50–100
+      businesses. This upgraded version expands the structure into a proposed
+      <strong>6–12 month programme</strong> with stronger evidence requirements,
+      governance, data protection, KPIs, a logical framework and an explicit
+      baseline stage.
+    </p>
+
+    <div class="callout" style="border-left-color: var(--accent); background:#f4f8f9;">
+      <p class="eyebrow" style="color: var(--accent);">What has changed in this edition</p>
+      <dl class="kv">
+        <dt>Evidence discipline</dt>
+        <dd>Digital gaps treated as hypotheses to be tested at baseline, not as city-wide statistics</dd>
+
+        <dt>Programme length</dt>
+        <dd>Expanded from a 16-week delivery to a 12-month phased programme</dd>
+
+        <dt>Governance</dt>
+        <dd>Added stakeholder roles, data governance, privacy and security principles</dd>
+
+        <dt>Measurement</dt>
+        <dd>Added a KPI framework, logical framework and post-intervention review points</dd>
+
+        <dt>Decision framing</dt>
+        <dd>First approval sought is for scoping and baseline, not city-wide delivery</dd>
+      </dl>
+    </div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 3 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 4 — STRATEGIC CASE                                              -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">1 · Strategic Case</span>
+  </header>
+
+  <div class="sheet-body">
+    <h2 class="sec"><span class="sec-num">1</span>Strategic Case — Physical City + Digital City</h2>
+
+    <p class="lead">
+      Every city now exists twice: once in physical space, and once in the digital
+      information layer through which people find, evaluate and navigate it.
+    </p>
+
+    <div class="grid2">
+      <div class="pcard">
+        <h4>Physical City</h4>
+        <ul>
+          <li>Roads and buildings</li>
+          <li>Public spaces and heritage assets</li>
+          <li>Hotels and restaurants</li>
+          <li>Markets and transport</li>
+          <li>Attractions and infrastructure</li>
+        </ul>
+      </div>
+      <div class="pcard">
+        <h4>Digital City</h4>
+        <ul>
+          <li>Google Maps and search results</li>
+          <li>Business websites</li>
+          <li>Social channels</li>
+          <li>Digital catalogues and reviews</li>
+          <li>Photos, videos, contacts and hours</li>
+          <li>Tourism and destination information</li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="margin-top:12px;">
+      These two layers are complementary. Physical investment creates value;
+      accurate digital information helps people discover, understand, navigate and
+      engage with that value.
+    </p>
+
+    <div class="callout">
+      <p class="eyebrow">Evidence boundary</p>
+      <p>
+        Better digital information may improve discoverability and reduce information
+        friction, but the economic effect should be tested through baseline and
+        follow-up evaluation rather than assumed.
+      </p>
+    </div>
+
+    <h3 class="sub">Why Harar?</h3>
+
+    <p>
+      Harar is suitable for a pilot because its heritage proposition is highly
+      information-dependent. UNESCO describes Harar Jugol as a rare historic town
+      retaining traditions, urban fabric and Harari Muslim cultural heritage, with
+      recognised handicraft traditions including weaving, basket making and book
+      binding.
+    </p>
+
+    <p>
+      These are attributes that visitors actively search for — and that a
+      well-structured digital layer can make legible to them before arrival. The
+      same attributes are poorly served by fragmented, absent or outdated online
+      information.
+    </p>
+
+    <div class="panel-dark">
+      <p class="eyebrow">Positioning statement</p>
+      <h3>Digital visibility is infrastructure, not marketing.</h3>
+      <p>
+        A verified business map, accurate listings and a governed discovery layer
+        function in the same way as a road sign or a public register: they reduce the
+        cost of finding and trusting what already exists.
+      </p>
+    </div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 4 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 5 — PROBLEM STATEMENT                                           -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">2 · Problem Statement</span>
+  </header>
+
+  <div class="sheet-body">
+    <h2 class="sec"><span class="sec-num">2</span>Problem Statement</h2>
+
+    <p class="lead">
+      The proposal identifies a potential digital visibility gap across markets,
+      guesthouses, restaurants, workshops, retail streets and tourism-facing
+      businesses. These observations are hypotheses to be tested rather than
+      city-wide statistics.
+    </p>
+
+    <div class="grid3">
+      <div class="pcard">
+        <span class="card-num">01</span>
+        <h4>Discoverability</h4>
+        <p>Businesses may be absent, duplicated or inaccurately represented on search and mapping platforms.</p>
+      </div>
+      <div class="pcard">
+        <span class="card-num">02</span>
+        <h4>Information quality</h4>
+        <p>Location, phone, opening hours, services, photos or languages may be incomplete.</p>
+      </div>
+      <div class="pcard">
+        <span class="card-num">03</span>
+        <h4>Digital identity</h4>
+        <p>Social accounts may exist without a stable, searchable business identity.</p>
+      </div>
+      <div class="pcard">
+        <span class="card-num">04</span>
+        <h4>Tourism information</h4>
+        <p>Products, experiences, prices or booking and contact pathways may not be clearly explained online.</p>
+      </div>
+      <div class="pcard">
+        <span class="card-num">05</span>
+        <h4>Customer uncertainty</h4>
+        <p>Customers may face difficulty comparing businesses or planning visits before arrival.</p>
+      </div>
+      <div class="pcard">
+        <span class="card-num">06</span>
+        <h4>City data gap</h4>
+        <p>The City Administration may lack a consolidated, verified digital map of the local business ecosystem.</p>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:18px;">
+      <p class="eyebrow">Required evidence</p>
+      <p>
+        The baseline must establish prevalence, geographic distribution and severity
+        before city-wide targets are fixed. No percentage targets are proposed in
+        this document for that reason.
+      </p>
+    </div>
+
+    <h3 class="sub">Why this framing matters</h3>
+
+    <p>
+      Framing the gap as a hypothesis rather than a fact changes what the City
+      Administration is being asked to approve. Instead of approving an intervention
+      on the assumption that the problem is universal, the first phase is designed to
+      measure the problem — and to make the case for scale on evidence rather than on
+      assertion.
+    </p>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 5 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 6 — FOUR-PERSPECTIVE ANALYSIS                                   -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">3 · Four-Perspective Analysis</span>
+  </header>
+
+  <div class="sheet-body">
+    <h2 class="sec"><span class="sec-num">3</span>Four-Perspective Analysis</h2>
+
+    <p class="lead">
+      The initiative is assessed from four viewpoints. Each perspective carries
+      different expectations and different limits on what digital visibility alone
+      can deliver.
+    </p>
+
+    <div class="grid2">
+      <div class="pcard">
+        <h4>Local businesses</h4>
+        <ul>
+          <li>Accurate information supports discoverability and credibility.</li>
+          <li>Maps, contacts, services and photos can reduce friction.</li>
+          <li>Consistent digital identity can support partnerships and tourism exposure.</li>
+        </ul>
+      </div>
+
+      <div class="pcard">
+        <h4>Customers &amp; tourists</h4>
+        <ul>
+          <li>Visitors need location, hours, services, photos and contacts.</li>
+          <li>Domestic and international visitors may have different language needs.</li>
+          <li>Accurate information can reduce uncertainty without guaranteeing a purchase.</li>
+        </ul>
+      </div>
+
+      <div class="pcard">
+        <h4>Government</h4>
+        <ul>
+          <li>A verified business map can complement planning and tourism promotion.</li>
+          <li>A structured dataset provides a monitoring baseline.</li>
+          <li>It must not replace registration, licensing or statistics systems.</li>
+        </ul>
+      </div>
+
+      <div class="pcard">
+        <h4>City, region and national image</h4>
+        <ul>
+          <li>Digital information contributes to a destination's first impression.</li>
+          <li>Accurate representation improves consistency.</li>
+          <li>Digital visibility is one component of tourism competitiveness.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:18px;">
+      <p class="eyebrow">Boundary condition</p>
+      <p>
+        The programme adds a digital information layer. It does not replace physical
+        development, heritage management, tourism investment, business registration
+        or official government statistics systems — and is not proposed as a
+        substitute for any of them.
+      </p>
+    </div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 6 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 7 — OBJECTIVE AND RESULTS                                       -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">4 · Programme Objective and Results</span>
+  </header>
+
+  <div class="sheet-body">
+    <h2 class="sec"><span class="sec-num">4</span>Programme Objective and Results</h2>
+
+    <div class="panel-dark">
+      <p class="eyebrow">Overall objective</p>
+      <h3>Establish a measurable, scalable digital business-presence system</h3>
+      <p>
+        Connect Harar's physical economic and tourism assets with accurate,
+        discoverable and maintainable digital information.
+      </p>
+    </div>
+
+    <h3 class="sub">Specific Objectives</h3>
+
+    <ol class="obj">
+      <li>
+        Create a <strong>verified digital business register</strong> for the pilot
+        area.
+      </li>
+      <li>
+        <strong>Measure the baseline digital presence</strong> of participating
+        businesses.
+      </li>
+      <li>
+        <strong>Correct or improve core discovery information</strong> — name,
+        location, contact, hours, category and photographs.
+      </li>
+      <li>
+        Provide <strong>targeted websites, catalogues, social setup, local SEO and
+        communication improvements</strong> where justified by the audit.
+      </li>
+      <li>
+        <strong>Train owners and staff</strong> in digital management and online
+        safety.
+      </li>
+      <li>
+        Create a <strong>governed city-level discovery layer</strong> built from
+        verified participating data.
+      </li>
+      <li>
+        Establish a <strong>dashboard and repeatable toolkit</strong> for expansion
+        to additional districts.
+      </li>
+    </ol>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 7 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 8 — PROGRAMME ARCHITECTURE 1                                    -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">5 · Programme Architecture (1 of 2)</span>
+  </header>
+
+  <div class="sheet-body">
+    <h2 class="sec"><span class="sec-num">5</span>Proposed Programme Architecture</h2>
+
+    <p class="lead">
+      The programme is structured in seven phases across twelve months. Phases
+      overlap deliberately: mapping, auditing and improvement work are sequenced so
+      that findings from one phase inform the next.
+    </p>
+
+    <div class="phase">
+      <div class="ph-meta">
+        <span class="ph-num">Phase 1</span>
+        <span class="ph-weeks">Month 1</span>
+      </div>
+      <div class="ph-body">
+        <h3 class="ph-title">Stakeholder Mobilisation &amp; Baseline Design</h3>
+        <p>
+          Confirm pilot district or cluster, governance arrangements, data fields,
+          verification procedure, consent approach and methodology; map existing
+          official datasets to avoid duplication.
+        </p>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="ph-meta">
+        <span class="ph-num">Phase 2</span>
+        <span class="ph-weeks">Months 2–3</span>
+      </div>
+      <div class="ph-body">
+        <h3 class="ph-title">Business Mapping</h3>
+        <p>
+          Collect identity, category, location, contacts, links, maps, hours, photos,
+          languages, products and services, and tourism relevance for each business
+          in the pilot area.
+        </p>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="ph-meta">
+        <span class="ph-num">Phase 3</span>
+        <span class="ph-weeks">Months 2–4</span>
+      </div>
+      <div class="ph-body">
+        <h3 class="ph-title">Digital Presence Audit</h3>
+        <p>
+          Assess discoverability, accuracy, maps presence, mobile usability, social
+          activity, reviews, contactability, visual quality, multilingual access and
+          tourism information against a structured scorecard.
+        </p>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="ph-meta">
+        <span class="ph-num">Phase 4</span>
+        <span class="ph-weeks">Months 4–6</span>
+      </div>
+      <div class="ph-body">
+        <h3 class="ph-title">Improvement Packages</h3>
+        <p>
+          Delivered selectively, based on audit findings: map and profile correction;
+          local SEO; website or storefront; catalogue; social setup; booking and
+          contact workflow; photography; and skills or maintenance support.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 8 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 9 — PROGRAMME ARCHITECTURE 2                                    -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">5 · Programme Architecture (2 of 2)</span>
+  </header>
+
+  <div class="sheet-body">
+    <div class="phase" style="border-top: 1.4pt solid var(--rule-strong);">
+      <div class="ph-meta">
+        <span class="ph-num">Phase 5</span>
+        <span class="ph-weeks">Months 6–9</span>
+      </div>
+      <div class="ph-body">
+        <h3 class="ph-title">City Digital Discovery Layer</h3>
+        <p>
+          A public directory or destination layer built from verified participating
+          data. This is explicitly a <strong>discovery service</strong>, not a
+          business registration database, and does not replace official records.
+        </p>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="ph-meta">
+        <span class="ph-num">Phase 6</span>
+        <span class="ph-weeks">Months 6–9</span>
+      </div>
+      <div class="ph-body">
+        <h3 class="ph-title">Training &amp; Handover</h3>
+        <p>
+          Practical training delivered in Amharic, Afaan Oromo and/or Harari as
+          appropriate, covering profile management, reviews, publishing, security and
+          correction procedures — with written guides handed over to participants.
+        </p>
+      </div>
+    </div>
+
+    <div class="phase">
+      <div class="ph-meta">
+        <span class="ph-num">Phase 7</span>
+        <span class="ph-weeks">Months 9–12</span>
+      </div>
+      <div class="ph-body">
+        <h3 class="ph-title">Monitoring &amp; Scale-Up</h3>
+        <p>
+          Baseline, implementation and post-intervention measurement, with review
+          points at 3, 6 and 12 months where feasible, and a documented scale toolkit
+          for additional districts.
+        </p>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:20px;">
+      <p class="eyebrow">Sequencing note</p>
+      <p>
+        Phases 2 and 3 run in parallel so that mapping data feeds the audit without
+        a second field visit. Phase 4 improvement work begins only after audit
+        findings are validated and prioritised, so that effort is directed by
+        evidence rather than by assumption.
+      </p>
+    </div>
+
+    <h3 class="sub" style="margin-top:20px;">Phase Summary</h3>
+
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th class="num">Phase</th>
+          <th style="width:42%;">Work stream</th>
+          <th style="width:22%;">Indicative period</th>
+          <th>Primary output</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="num">1</td><td>Mobilisation &amp; baseline design</td><td>Month 1</td><td>Approved pilot framework</td></tr>
+        <tr><td class="num">2</td><td>Business mapping</td><td>Months 2–3</td><td>Verified business register</td></tr>
+        <tr><td class="num">3</td><td>Digital presence audit</td><td>Months 2–4</td><td>Baseline visibility dataset</td></tr>
+        <tr><td class="num">4</td><td>Improvement packages</td><td>Months 4–6</td><td>Corrected listings, sites, catalogues</td></tr>
+        <tr><td class="num">5</td><td>City discovery layer</td><td>Months 6–9</td><td>Public directory / destination layer</td></tr>
+        <tr><td class="num">6</td><td>Training &amp; handover</td><td>Months 6–9</td><td>Trained owners, written guides</td></tr>
+        <tr><td class="num">7</td><td>Monitoring &amp; scale-up</td><td>Months 9–12</td><td>Evaluation and scale toolkit</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 9 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 10 — BUSINESS DATA MODEL                                        -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">6 · Business Data Model</span>
+  </header>
+
+  <div class="sheet-body">
+    <h2 class="sec"><span class="sec-num">6</span>Business Data Model</h2>
+
+    <p class="lead">
+      The register is the foundation of the entire programme. Without a consistent,
+      verified and maintainable data model, later phases cannot be measured or
+      scaled.
+    </p>
+
+    <div class="grid3">
+      <div class="pcard">
+        <h4>Identity</h4>
+        <p>Business ID, name, category, subcategory.</p>
+      </div>
+      <div class="pcard">
+        <h4>Location</h4>
+        <p>Address, coordinates, kebele, sub-city or district.</p>
+      </div>
+      <div class="pcard">
+        <h4>Contacts</h4>
+        <p>Phone, WhatsApp, email, website.</p>
+      </div>
+      <div class="pcard">
+        <h4>Platforms</h4>
+        <p>Google Maps and profile, Facebook, Instagram, TikTok.</p>
+      </div>
+      <div class="pcard">
+        <h4>Offer</h4>
+        <p>Hours, products and services, languages, tourism relevance.</p>
+      </div>
+      <div class="pcard">
+        <h4>Verification</h4>
+        <p>Photos and date, reviews, verification status and date, intervention and follow-up.</p>
+      </div>
+    </div>
+
+    <h3 class="sub">Data Separation Principle</h3>
+
+    <p>
+      Data collected under this programme must be separated into three categories,
+      each with different handling rules:
+    </p>
+
+    <ul class="plain">
+      <li>
+        <strong>Public business information</strong> — information a business is
+        willing to publish, and which may appear in listings or the discovery layer.
+      </li>
+      <li>
+        <strong>Operational project information</strong> — internal delivery,
+        verification and follow-up records used to manage the programme.
+      </li>
+      <li>
+        <strong>Personal data</strong> — information relating to identifiable
+        individuals, requiring additional protection and stricter handling.
+      </li>
+    </ul>
+
+    <div class="callout">
+      <p class="eyebrow">Design rule</p>
+      <p>
+        Every data field must have a stated purpose, a defined source, a verification
+        date and a retention rule before collection begins. Fields without a purpose
+        are not collected.
+      </p>
+    </div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 10 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 11 — DIGITAL PRESENCE SCORECARD                                 -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">6.2 · Digital Presence Scorecard</span>
+  </header>
+
+  <div class="sheet-body">
+    <h3 class="sub"><span class="sub-num">6.2</span>Digital Presence Scorecard</h3>
+
+    <p>
+      Each business is assessed against ten dimensions. The scorecard produces a
+      comparable baseline and makes improvement measurable at follow-up.
+    </p>
+
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th style="width:30%;">Dimension</th>
+          <th style="width:34%;">Example evidence</th>
+          <th>Measurement principle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Discoverability</td><td>Search and map findability</td><td>Defined search protocol and sample</td></tr>
+        <tr><td>Accuracy</td><td>Name, phone, address, hours</td><td>Verified against the business</td></tr>
+        <tr><td>Website &amp; mobile</td><td>Availability and usability</td><td>Structured checklist</td></tr>
+        <tr><td>Maps presence</td><td>Listing existence and correctness</td><td>Platform audit</td></tr>
+        <tr><td>Social</td><td>Activity and identity</td><td>Defined observation window</td></tr>
+        <tr><td>Reviews</td><td>Presence, recency, response practice</td><td>Descriptive metrics; no ranking</td></tr>
+        <tr><td>Contactability</td><td>Phone, message, email</td><td>Approved test protocol</td></tr>
+        <tr><td>Products &amp; services</td><td>Clarity of offer information</td><td>Checklist</td></tr>
+        <tr><td>Visual presentation</td><td>Current photos, brand consistency</td><td>Checklist</td></tr>
+        <tr><td>Multilingual access</td><td>Relevant language information</td><td>Defined criteria</td></tr>
+      </tbody>
+    </table>
+
+    <p class="tbl-note">
+      The scorecard is descriptive rather than competitive: businesses are not ranked
+      against one another, and review counts are not treated as a quality measure.
+    </p>
+
+    <div class="callout" style="margin-top:20px;">
+      <p class="eyebrow">Measurement integrity</p>
+      <p>
+        The same scorecard, protocol and observation window are applied at baseline
+        and at follow-up. Where an element cannot be measured consistently, it is
+        recorded as a qualitative note rather than converted into a number.
+      </p>
+    </div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 11 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 12 — ROADMAP                                                    -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">7 · Implementation Roadmap</span>
+  </header>
+
+  <div class="sheet-body">
+    <h2 class="sec"><span class="sec-num">7</span>Implementation Roadmap — 12 Months</h2>
+
+    <p class="lead">
+      The roadmap below sets out activity, timing and output across the twelve-month
+      programme, ending in an explicit scale decision based on evidence.
+    </p>
+
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th style="width:20%;">Period</th>
+          <th style="width:44%;">Activities</th>
+          <th>Outputs</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Month 1</td>
+          <td>Stakeholder engagement; pilot selection; methodology; governance</td>
+          <td>Approved pilot framework</td>
+        </tr>
+        <tr>
+          <td>Months 2–3</td>
+          <td>Business mapping and baseline audit</td>
+          <td>Verified register and baseline</td>
+        </tr>
+        <tr>
+          <td>Months 3–4</td>
+          <td>Data verification and prioritisation</td>
+          <td>Validated intervention list</td>
+        </tr>
+        <tr>
+          <td>Months 4–6</td>
+          <td>Pilot digital improvements</td>
+          <td>Improved listings, sites, catalogues</td>
+        </tr>
+        <tr>
+          <td>Months 6–9</td>
+          <td>Directory and discovery platform; training</td>
+          <td>Discovery layer and trained users</td>
+        </tr>
+        <tr>
+          <td>Months 9–10</td>
+          <td>Follow-up audit and user feedback</td>
+          <td>Post-intervention dataset</td>
+        </tr>
+        <tr>
+          <td>Months 10–12</td>
+          <td>Evaluation, documentation and scale decision</td>
+          <td>Evaluation report and scale toolkit</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top:18px;">
+      <p class="eyebrow">Decision gate</p>
+      <p>
+        The scale decision at month 12 is evidence-based. Expansion to further
+        districts is recommended only where baseline-to-follow-up change is
+        demonstrated, participation was adequate, and a maintenance owner has been
+        identified.
+      </p>
+    </div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 12 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 13 — GOVERNANCE                                                 -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">8 · Governance and Roles</span>
+  </header>
+
+  <div class="sheet-body">
+    <h2 class="sec"><span class="sec-num">8</span>Governance and Roles</h2>
+
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th style="width:34%;">Stakeholder</th>
+          <th>Proposed role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Harar City Administration</td>
+          <td>Endorsement, pilot selection, coordination, facilitation, review of city-facing content and alignment with official systems.</td>
+        </tr>
+        <tr>
+          <td>Tourism and heritage stakeholders</td>
+          <td>Destination priorities, heritage-sensitive content and tourism information verification.</td>
+        </tr>
+        <tr>
+          <td>Trade and business stakeholders</td>
+          <td>Business outreach, sector coordination, participation and feedback.</td>
+        </tr>
+        <tr>
+          <td>Adal Digital Marketing</td>
+          <td>Programme planning, survey design, data architecture and systems; digital audit, maps and profile work, local SEO, websites and storefronts, social setup, training delivery, coordination and reporting.</td>
+        </tr>
+        <tr>
+          <td>Participating businesses</td>
+          <td>Provide accurate information, approve business-facing content and maintain credentials and updates.</td>
+        </tr>
+        <tr>
+          <td>Technology and data partners</td>
+          <td>Where formally engaged: hosting, security, analytics or platform support.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top:18px;">
+      <p class="eyebrow">Governance principle</p>
+      <p>
+        All city-facing content is reviewed and approved by the City Administration
+        before publication. No business data is published without the business's
+        authorisation.
+      </p>
+    </div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 13 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 14 — DATA GOVERNANCE                                            -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">8.2 · Data Governance, Privacy &amp; Security</span>
+  </header>
+
+  <div class="sheet-body">
+    <h3 class="sub"><span class="sub-num">8.2</span>Data Governance, Privacy &amp; Security</h3>
+
+    <p class="lead">
+      Because the programme collects business and personal information at scale, data
+      governance is treated as a core deliverable rather than an administrative
+      afterthought.
+    </p>
+
+    <ul class="plain">
+      <li>Collect only data that is necessary for a stated purpose.</li>
+      <li>Use clear consent or authorisation where required.</li>
+      <li>Distinguish public business information from private personal information.</li>
+      <li>Record the source of every data field and its verification date.</li>
+      <li>Provide a documented correction and removal process for businesses.</li>
+      <li>Do not republish restricted information without authorisation.</li>
+      <li>Use role-based access, secure credential handling and regular backups.</li>
+      <li>Do not publish sensitive personal information under any circumstances.</li>
+      <li>Define retention and deletion rules before collection begins.</li>
+      <li>Obtain legal and administrative review for applicable Ethiopian requirements.</li>
+    </ul>
+
+    <div class="panel-dark">
+      <p class="eyebrow">Accountability</p>
+      <h3>A named data owner, a written procedure, a correction channel.</h3>
+      <p>
+        Before Phase 2 begins, the programme must identify who holds the register,
+        who may access it, how corrections are processed and how the register is
+        maintained after handover.
+      </p>
+    </div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 14 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 15 — KPIs                                                       -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">9 · Monitoring, Evaluation and KPIs</span>
+  </header>
+
+  <div class="sheet-body">
+    <h2 class="sec"><span class="sec-num">9</span>Monitoring, Evaluation and KPIs</h2>
+
+    <p class="lead">
+      Indicators are reported at a stated frequency and verified against a named
+      source, so that progress claims can be checked independently.
+    </p>
+
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th style="width:46%;">KPI</th>
+          <th style="width:26%;">Unit</th>
+          <th>Frequency</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Businesses mapped</td><td>Count</td><td>Baseline and monthly</td></tr>
+        <tr><td>Businesses audited</td><td>Count / % of mapped</td><td>Baseline and monthly</td></tr>
+        <tr><td>Accurate core information</td><td>Percentage</td><td>Baseline and quarterly</td></tr>
+        <tr><td>Verified map and search presence</td><td>Percentage</td><td>Baseline and quarterly</td></tr>
+        <tr><td>Improvement packages delivered</td><td>Count</td><td>Monthly</td></tr>
+        <tr><td>Websites and catalogues delivered</td><td>Count</td><td>Monthly</td></tr>
+        <tr><td>Owners and staff trained</td><td>Count</td><td>Monthly</td></tr>
+        <tr><td>Tourism-facing businesses digitally visible</td><td>Percentage</td><td>Baseline and quarterly</td></tr>
+        <tr><td>Customer inquiries or contact events</td><td>Count where measurable</td><td>Monthly / quarterly</td></tr>
+        <tr><td>Geographic coverage</td><td>% of pilot area or sample</td><td>Monthly</td></tr>
+        <tr><td>Business satisfaction</td><td>Survey measure</td><td>Post-intervention</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top:18px;">
+      <p class="eyebrow">Target-setting rule</p>
+      <p>
+        Targets are established <strong>after</strong> the baseline is complete,
+        rather than using arbitrary percentages set in advance. This document
+        therefore proposes no numeric targets.
+      </p>
+    </div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 15 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 16 — LOGICAL FRAMEWORK                                          -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">9.2 · Logical Framework</span>
+  </header>
+
+  <div class="sheet-body">
+    <h3 class="sub"><span class="sub-num">9.2</span>Logical Framework</h3>
+
+    <p>
+      The logical framework connects the programme's intended impact to its outputs
+      and states how each level is verified.
+    </p>
+
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th style="width:20%;">Level</th>
+          <th style="width:44%;">Statement</th>
+          <th>Indicator and verification</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Impact</strong></td>
+          <td>Improved digital discoverability of Harar's local economic and tourism ecosystem</td>
+          <td>Baseline-to-follow-up change; audit and analytics where available</td>
+        </tr>
+        <tr>
+          <td><strong>Outcome 1</strong></td>
+          <td>Businesses have more accurate and usable digital information</td>
+          <td>Percentage meeting minimum standard; digital audit</td>
+        </tr>
+        <tr>
+          <td><strong>Outcome 2</strong></td>
+          <td>City stakeholders have a structured business visibility dataset</td>
+          <td>Verified register plus documented update process</td>
+        </tr>
+        <tr>
+          <td><strong>Outcome 3</strong></td>
+          <td>Businesses gain practical digital-management capability</td>
+          <td>Training completion plus capability survey</td>
+        </tr>
+        <tr>
+          <td><strong>Outputs</strong></td>
+          <td>Register and baseline, priority improvements, discovery layer and scale toolkit</td>
+          <td>Project database, delivery records, platform review, handover package</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top:18px;">
+      <p class="eyebrow">Interpretation rule</p>
+      <p>
+        Outputs are counted directly. Outcomes are measured through before-and-after
+        comparison. Impact is treated as a directional finding, not a proven causal
+        claim, unless a comparable control group is available.
+      </p>
+    </div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 16 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 17 — RISKS                                                      -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">10 · Risks and Mitigation</span>
+  </header>
+
+  <div class="sheet-body">
+    <h2 class="sec"><span class="sec-num">10</span>Risks and Mitigation</h2>
+
+    <table class="tbl">
+      <thead>
+        <tr>
+          <th style="width:34%;">Risk</th>
+          <th>Mitigation</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Low participation</td><td>Trusted city and business associations, clear benefits and willing pilot participants.</td></tr>
+        <tr><td>Inaccurate data</td><td>Verification workflow, source and date fields, and business confirmation.</td></tr>
+        <tr><td>Outdated information</td><td>Maintenance ownership, periodic re-verification and a correction channel.</td></tr>
+        <tr><td>Digital skills gaps</td><td>Practical multilingual training and simple written guides.</td></tr>
+        <tr><td>Platform dependency</td><td>Maintain structured master data under agreed governance, independent of any single platform.</td></tr>
+        <tr><td>Privacy and security</td><td>Minimise personal data, apply access controls, obtain legal review and secure credentials.</td></tr>
+        <tr><td>Unequal access</td><td>Offline field support and accessible training formats.</td></tr>
+        <tr><td>Maintenance cost</td><td>Define ownership and recurring resources before scaling.</td></tr>
+        <tr><td>Heritage sensitivity</td><td>Coordinate all public-facing content with heritage stakeholders.</td></tr>
+        <tr><td>Weak economic-impact evidence</td><td>Use baseline and comparison where feasible; distinguish outputs from outcomes.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 17 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 18 — SUSTAINABILITY                                             -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">11 · Sustainability and Resource Framework</span>
+  </header>
+
+  <div class="sheet-body">
+    <h2 class="sec"><span class="sec-num">11</span>Sustainability and Resource Framework</h2>
+
+    <p class="lead">
+      The programme can be structured as a public-interest pilot with a blended
+      sustainability model, so that delivery does not depend on a single funding
+      source.
+    </p>
+
+    <div class="grid3">
+      <div class="pcard">
+        <h4>Public support</h4>
+        <p>Government-supported pilot and coordination.</p>
+      </div>
+      <div class="pcard">
+        <h4>Development partners</h4>
+        <p>Baseline, training, inclusion and shared infrastructure.</p>
+      </div>
+      <div class="pcard">
+        <h4>Business services</h4>
+        <p>Optional website, catalogue, photography, SEO, content and maintenance.</p>
+      </div>
+      <div class="pcard">
+        <h4>Associations</h4>
+        <p>Business association and chamber partnerships.</p>
+      </div>
+      <div class="pcard">
+        <h4>Tourism</h4>
+        <p>Tourism partnerships and destination promotion.</p>
+      </div>
+      <div class="pcard">
+        <h4>Directory</h4>
+        <p>Carefully governed sponsorship or commercial participation.</p>
+      </div>
+    </div>
+
+    <h3 class="sub">Budget Categories</h3>
+
+    <ul class="plain">
+      <li>Project management and coordination</li>
+      <li>Field surveyors and enumerators</li>
+      <li>Data and GIS support</li>
+      <li>Digital audit and local SEO</li>
+      <li>Website and storefront development</li>
+      <li>Photography and visual content</li>
+      <li>Training delivery</li>
+      <li>Hosting, domain and technical infrastructure</li>
+      <li>Directory development and maintenance</li>
+      <li>Monitoring, evaluation and user research</li>
+      <li>Translation and localisation</li>
+      <li>Cybersecurity, backups and data governance</li>
+      <li>Communications and stakeholder engagement</li>
+      <li>Contingency and maintenance reserve</li>
+    </ul>
+
+    <div class="callout">
+      <p class="eyebrow">Budget rule</p>
+      <p>
+        The detailed ETB budget is prepared after pilot selection and business-count
+        confirmation. No revenue projection is recommended until demand, pricing,
+        operating costs, adoption and maintenance assumptions are validated.
+      </p>
+    </div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 18 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 19 — PILOT DESIGN                                               -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">12 · Pilot Design &amp; Field Tools</span>
+  </header>
+
+  <div class="sheet-body">
+    <h2 class="sec"><span class="sec-num">12</span>Pilot Design &amp; Field Tools</h2>
+
+    <p class="lead">
+      The planning range is approximately <strong>50–100 businesses</strong> for one
+      pilot district, with final selection conditional on baseline results and
+      operational capacity.
+    </p>
+
+    <ol class="obj">
+      <li>Select a commercially and/or tourism-relevant cluster with manageable boundaries.</li>
+      <li>Include different business types across the cluster.</li>
+      <li>Document participation and non-participation.</li>
+      <li>Measure the same indicators before and after intervention.</li>
+      <li>Include owner and customer feedback where feasible.</li>
+      <li>Use results to determine whether expansion is justified.</li>
+    </ol>
+
+    <h3 class="sub">Data Collection Template</h3>
+
+    <div class="data-strip">
+      <p class="eyebrow">Field record — fields</p>
+      Business ID | Business name | Category | Subcategory | District / Kebele | Address |
+      Map coordinates | Phone | WhatsApp | Email | Website | Google Maps / profile |
+      Facebook | Instagram | TikTok | Opening hours | Languages | Products / services |
+      Tourism relevance | Photos | Reviews | Digital status | Accuracy issues |
+      Recommended package | Consent / authorisation | Verification date | Enumerator
+    </div>
+
+    <h3 class="sub">Digital Business Audit Checklist</h3>
+
+    <ul class="check">
+      <li>Can the business be found by name?</li>
+      <li>Is the map location accurate?</li>
+      <li>Are phone and contact details correct?</li>
+      <li>Are opening hours present and current?</li>
+      <li>Is the category appropriate?</li>
+      <li>Are photos current and useful?</li>
+      <li>Is there a website or catalogue where needed?</li>
+      <li>Does the website work on mobile?</li>
+      <li>Are products and services understandable?</li>
+      <li>Are social accounts identifiable and active?</li>
+      <li>Are reviews visible and is there a response process?</li>
+      <li>Are relevant languages represented?</li>
+      <li>Can a visitor understand how to contact, visit or book?</li>
+      <li>Does the digital presentation accurately represent the physical business?</li>
+    </ul>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 19 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 20 — DECISION & CONCLUSION                                      -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">13 · Decision Requested &nbsp;·&nbsp; 14 · Conclusion</span>
+  </header>
+
+  <div class="sheet-body">
+    <h2 class="sec"><span class="sec-num">13</span>Decision Requested</h2>
+
+    <div class="panel-dark">
+      <p class="eyebrow">Approve the scoping and baseline phase</p>
+      <h3>The first decision is not to approve a city-wide website programme.</h3>
+      <p>
+        It is to approve a structured scoping and baseline phase that measures the
+        current situation, identifies priority businesses and confirms governance,
+        technical, financial and maintenance requirements for a scalable pilot.
+      </p>
+    </div>
+
+    <div class="grid3" style="margin-top:14px;">
+      <div class="pcard">
+        <span class="card-num">01</span>
+        <h4>Scope</h4>
+        <p>Confirm stakeholders, geography and governance.</p>
+      </div>
+      <div class="pcard">
+        <span class="card-num">02</span>
+        <h4>Measure</h4>
+        <p>Build the verified business dataset and baseline.</p>
+      </div>
+      <div class="pcard">
+        <span class="card-num">03</span>
+        <h4>Implement</h4>
+        <p>Deliver targeted improvements and training.</p>
+      </div>
+      <div class="pcard">
+        <span class="card-num">04</span>
+        <h4>Evaluate</h4>
+        <p>Measure post-intervention change.</p>
+      </div>
+      <div class="pcard">
+        <span class="card-num">05</span>
+        <h4>Document</h4>
+        <p>Create the scale toolkit and maintenance model.</p>
+      </div>
+      <div class="pcard">
+        <span class="card-num">06</span>
+        <h4>Scale</h4>
+        <p>Use evidence to determine whether and how to expand.</p>
+      </div>
+    </div>
+
+    <h2 class="sec" style="margin-top:26px;"><span class="sec-num">14</span>Conclusion</h2>
+
+    <p>
+      Modernising a city is not only about how the city looks physically. It is also
+      about how easily people can discover, understand, navigate and engage with its
+      businesses, services and cultural assets digitally.
+    </p>
+
+    <p>
+      The programme does not replace physical development, heritage management,
+      tourism investment or official government systems. It adds a practical digital
+      layer that can connect those investments to the people who need to discover and
+      use them.
+    </p>
+
+    <div class="panel-dark" style="margin-top:16px;">
+      <h3 style="font-size:14pt; line-height:1.28;">
+        Build the city physically.<br>Make it discoverable digitally.
+      </h3>
+    </div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 20 of 21</span>
+  </footer>
+</section>
+
+<!-- ==================================================================== -->
+<!-- PAGE 21 — EVIDENCE & SOURCES + SIGNATURE                             -->
+<!-- ==================================================================== -->
+<section class="sheet">
+  <header class="sheet-head">
+    <span>Harar City Digital Visibility Initiative</span>
+    <span class="sh-right">15 · Evidence &amp; Sources</span>
+  </header>
+
+  <div class="sheet-body">
+    <h2 class="sec"><span class="sec-num">15</span>Evidence &amp; Sources</h2>
+
+    <ol class="obj">
+      <li>
+        UNESCO World Heritage Centre — <em>Harar Jugol, the Fortified Historic
+        Town</em>. whc.unesco.org/en/list/1189
+      </li>
+      <li>
+        World Bank — <em>Empowering Ethiopians by Laying the Digital Foundations for
+        Economic Growth</em> (2025).
+      </li>
+      <li>
+        World Bank Data — Ethiopia, Individuals using the Internet (% of population),
+        2024 value. data.worldbank.org/country/ethiopia
+      </li>
+      <li>
+        Existing Harar Digital Visibility Proposal supplied by the proponent,
+        September 2026.
+      </li>
+      <li>
+        Federal Democratic Republic of Ethiopia, Office of the Prime Minister —
+        <em>Digital Ethiopia 2025</em>. pmo.gov.et
+      </li>
+      <li>
+        World Bank — Ethiopia tourism project documentation and tourism development
+        context (2024).
+      </li>
+      <li>
+        ITU — <em>Measuring Digital Development: Facts and Figures 2025</em>.
+        itu.int
+      </li>
+    </ol>
+
+    <h3 class="sub">Evidence Boundaries</h3>
+
+    <p>
+      Harar's UNESCO status and heritage characteristics, and national digital-access
+      indicators, are documented. The prevalence of digital gaps among Harar
+      businesses, customer behaviour in Harar, the number of businesses needing
+      intervention, and the economic impact of improvements all require baseline
+      measurement.
+    </p>
+
+    <div class="callout">
+      <p class="eyebrow">Statement of limitation</p>
+      <p>
+        This document proposes a measurement approach. It does not assert a
+        quantified problem or a projected economic return. Those findings are the
+        intended output of the scoping and baseline phase requested in Section 13.
+      </p>
+    </div>
+
+    <div class="sig-block">
+      <p class="eyebrow" style="margin-bottom:14px;">Acknowledgement</p>
+      <div class="sig-grid">
+        <div class="sig">
+          <div class="sig-line"></div>
+          <div class="sig-name">Guled Hassen Ahmed</div>
+          <div class="sig-role">Adal Digital Marketing &nbsp;·&nbsp; Date: ____________</div>
+        </div>
+        <div class="sig">
+          <div class="sig-line"></div>
+          <div class="sig-name">Harar City Administration</div>
+          <div class="sig-role">Endorsement and receipt &nbsp;·&nbsp; Date: ____________</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="sheet-foot">
+    <span>Adal Digital Marketing · Harar, Ethiopia</span>
+    <span class="folio">Page 21 of 21</span>
+  </footer>
+</section>
+
+</main>
+
+<!-- ============================ SCRIPT ================================== -->
+<script>
+(function () {
+  'use strict';
+
+  var doc      = document.getElementById('doc');
+  var btnEdit  = document.getElementById('btn-edit');
+  var btnPrint = document.getElementById('btn-print');
+
+  function setEditing(on) {
+    doc.setAttribute('contenteditable', on ? 'true' : 'false');
+    doc.setAttribute('spellcheck', on ? 'true' : 'false');
+    document.body.classList.toggle('editing', on);
+    btnEdit.textContent = on ? '✓ Editing on — click to lock' : '✎ Enable editing';
+    btnEdit.classList.toggle('on', on);
+    btnEdit.setAttribute('aria-pressed', on ? 'true' : 'false');
+    if (on) { doc.focus({ preventScroll: true }); }
+  }
+
+  btnEdit.addEventListener('click', function () {
+    setEditing(doc.getAttribute('contenteditable') !== 'true');
+  });
+
+  btnPrint.addEventListener('click', function () {
+    if (doc.getAttribute('contenteditable') === 'true') { setEditing(false); }
+    window.print();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'e') {
+      e.preventDefault();
+      setEditing(doc.getAttribute('contenteditable') !== 'true');
+    }
+  });
+
+  doc.addEventListener('paste', function (e) {
+    if (doc.getAttribute('contenteditable') !== 'true') { return; }
+    e.preventDefault();
+    var text = (e.clipboardData || window.clipboardData).getData('text/plain');
+    document.execCommand('insertText', false, text);
+  });
+
+  setEditing(false);
+})();
+</script>
+
+</body>
+</html>
